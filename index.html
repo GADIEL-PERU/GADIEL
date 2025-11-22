@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaDiel - Transparencia en Obras de Salud</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <!-- CHATBOT STYLES -->
+    <link rel="stylesheet" href="chatbot-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="assets/img/logo_32.jpeg" alt="Logo GaDiel" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="logo-title">GaDiel</h1>
+                        <p class="logo-subtitle">Transparencia en Obras de Salud</p>
+                    </div>
+                </div>
+
+                <nav class="desktop-nav">
+                    <button class="nav-btn active" data-section="inicio">Inicio</button>
+                    <button class="nav-btn" data-section="obras">Obras PRONIS Cusco</button>
+                    <button class="nav-btn" data-section="dashboards">Dashboards Power BI</button>
+                    <button class="nav-btn" data-section="contacto">Contacto</button>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-nav" id="mobileNav">
+                <button class="mobile-nav-btn active" data-section="inicio">Inicio</button>
+                <button class="mobile-nav-btn" data-section="obras">Obras PRONIS Cusco</button>
+                <button class="mobile-nav-btn" data-section="dashboards">Dashboards Power BI</button>
+                <button class="mobile-nav-btn" data-section="contacto">Contacto</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="section active">
+            <div class="contenido-header">
+                <div class="video-overlay"></div>
+                <video autoplay loop muted playsinline>
+                    <source src="assets/bg_video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento video.
+                </video>
+                <div class="contenedor-encabezado">
+                    <div class="texto-encabezado">
+                        <h2>Transparencia en cada avance, claridad en cada meta.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <section class="contenedor-nosotros contenedor" id="nosotros">
+                <div class="texto-nosotros">
+                    <p class="bienvenida">Bienvenido a!</p>
+                    <h1>GaDiel</h1>
+                    <p>Con Power BI impulsamos la eficiencia y transparencia en las inversiones públicas del PRONIS en Cusco. A través de un panel interactivo, podrás visualizar en tiempo real el avance de las obras, con indicadores claros de alcance, tiempo y presupuesto. Así, transformamos los datos en información confiable que facilita la toma de decisiones y asegura una mejor gestión de los proyectos de salud para la región.</p>
+                </div>
+                <div class="imagenes-nosotros">
+                    <div class="imagen1">
+                        <img src="assets/img/ing.jpg" alt="ingenieros viendo un panel" loading="lazy">
+                    </div>
+                    <div class="imagenes2">
+                        <img src="assets/img/lapto.jpg" alt="imagen de dashboard" loading="lazy">
+                        <img src="assets/img/portada1.jpg" alt="mejorando" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section class="container about" id="informacion">
+                <h2 class="subtitle">¿Qué información verás en este dashboard?</h2>
+                <p class="about__paragraph">Todo lo necesario para analizar y evaluar las obras del PRONIS en Cusco (alcance, tiempo, presupuesto y más).</p>
+
+                <div class="about__main">
+                    <article class="about__icons">
+                        <i class="fas fa-ruler-combined about__icon"></i>
+                        <h3 class="about__title">Alcance de las obras</h3>
+                        <p class="about__paragrah">Indicadores del número de proyectos, infraestructura ejecutada y cobertura poblacional beneficiada</p>
+                    </article>
+
+                    <article class="about__icons">
+                        <i class="fas fa-money-bill-wave about__icon"></i>
+                        <h3 class="about__title">Presupuesto y Recursos</h3>
+                        <p class="about__paragrah">Inversión planificada vs. ejecutada, control de costos y eficiencia en la asignación de recursos.</p>
+                    </article>
+
+                    <article class="about__icons">
+                        <i class="fas fa-chart-line about__icon"></i>
+                        <h3 class="about__title">Estado de Avance</h3>
+                        <p class="about__paragrah">Visualización del progreso de las obras: terminadas, en ejecución o paralizadas.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="testimony" id="equipo">
+                <div class="testimony__container container">
+                    <img src="assets/img/leftarrow.svg" class="testimony__arrow" id="before" alt="anterior">
+
+                    <section class="testimony__body testimony__body--show" data-id="1">
+                        <div class="testimony__texts">
+                            <h2 class="subtitle">Mi nombre es Diego Cotaquispe, <span class="testimony__course">Ingeniero Civil.</span></h2>
+                            <p class="testimony__review">Hola, soy Diego, ingeniero civil. Esta página nace con el propósito de mostrar de manera sencilla y transparente cómo avanzan los proyectos, reflejando su costo, tiempo y alcance.</p>
+                        </div>
+                        <figure class="testimony__picture">
+                            <img src="assets/img/diego1.png" class="testimony__img" alt="foto de diego">
+                        </figure>
+                    </section>
+
+                    <section class="testimony__body" data-id="2">
+                        <div class="testimony__texts">
+                            <h2 class="subtitle">Mi nombre es Gabriela Gamarra, <span class="testimony__course">Ingeniera Civil.</span></h2>
+                            <p class="testimony__review">Soy Gabriela, estudiante de ingeniería civil. Junto con Diego hemos creado este espacio para que la comunidad pueda seguir de cerca el progreso real de cada obra.</p>
+                        </div>
+                        <figure class="testimony__picture">
+                            <img src="assets/img/Gabriela.png" class="testimony__img" alt="foto de gabriela"> 
+                        </figure>
+                    </section>
+
+                    <section class="testimony__body" data-id="3">
+                        <div class="testimony__texts">
+                            <h2 class="subtitle">Mi nombre es Goyo Alvarez, <span class="testimony__course">Asesor de Tesis.</span></h2>
+                            <p class="testimony__review">Como asesor de tesis, he tenido el privilegio de guiar a Diego y Gabriela en este proyecto.</p>
+                            
+                            <div class="testimony__experience">
+                                <h4>Experiencia Profesional:</h4>
+                                <ul>
+                                    <li><strong>Universidad Peruana de Ciencias Aplicadas</strong> - Docente contratado (2019 - Actualidad)</li>
+                                    <li><strong>Supervisor especialidad BIM</strong> (2019 - 2021)</li>
+                                    <li><strong>Grupo HERGONSA</strong> - Ingeniero civil (2017)</li>
+                                    <li><strong>Pluspetrol</strong> - Inspector de Obras Civiles (2016 - 2017)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <figure class="testimony__picture">
+                            <img src="assets/img/goyo.jpg" class="testimony__img" alt="foto de goyo"> 
+                        </figure>
+                    </section>
+
+                    <img src="assets/img/rightarrow.svg" class="testimony__arrow" id="next" alt="siguiente">
+                </div>
+
+                <div class="testimony__indicators">
+                    <span class="testimony__indicator active" data-id="1"></span>
+                    <span class="testimony__indicator" data-id="2"></span>
+                    <span class="testimony__indicator" data-id="3"></span>
+                </div>
+            </section>
+
+            <section class="agradecimiento container">
+                <div class="agradecimiento-content">
+                    <h2 class="subtitle">Agradecimiento Especial</h2>
+                    <p class="agradecimiento-text">
+                        Queremos expresar nuestro más sincero agradecimiento al <strong>Ing. Goyo Alvarez</strong> por su invaluable guía, 
+                        apoyo y conocimiento compartido durante el desarrollo de este proyecto. Su experiencia en la gestión de obras 
+                        y su compromiso con la excelencia académica han sido fundamentales para el éxito de esta iniciativa.
+                    </p>
+                    <div class="agradecimiento-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"La transparencia no es solo mostrar datos, es construir confianza a través de la claridad."</p>
+                    </div>
+                </div>
+            </section>
+
+                               <article class="questions__padding">
+                        <div class="questions__answer">
+                            
+                            <p class="questions__show">
+                                Sí, todos los dashboards permiten exportar datos e imágenes para su análisis posterior.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section id="obras" class="section">
+            <div class="obras-section">
+                <div class="container">
+                    <div class="obras-header">
+                        <h2 class="obras-title">Obras PRONIS Cusco</h2>
+                        <p class="obras-subtitle">Exploración detallada de proyectos de inversión en salud</p>
+                    </div>
+
+                    <div class="filters-card">
+                        <div class="filters-grid">
+                            <div class="search-container">
+                                <i class="fas fa-search search-icon"></i>
+                                <input 
+                                    type="text" 
+                                    id="searchInput"
+                                    placeholder="Buscar obra o contratista..." 
+                                    class="search-input"
+                                    autocomplete="off"
+                                >
+                            </div>
+
+                            <select id="provinciaFilter" class="filter-select">
+                                <option value="Todas">Todas las provincias</option>
+                            </select>
+
+                            <select id="estadoFilter" class="filter-select">
+                                <option value="Todos">Todos los estados</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="results-count" id="resultsCount">
+                        Mostrando <span id="resultsNumber">0</span> de <span id="totalObras">0</span> obras
+                    </div>
+
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <table class="obras-table">
+                                <thead>
+                                    <tr>
+                                        <th>Obra</th>
+                                        <th>Provincia</th>
+                                        <th>Estado</th>
+                                        <th>Inversión</th>
+                                        <th>Avance</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="obrasTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="loading-spinner" id="loadingSpinner">
+                        <div class="spinner"></div>
+                        <p>Cargando obras...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboards" class="section">
+            <div class="dashboards-section">
+                <div class="container">
+                    <div class="dashboards-header">
+                        <h2 class="dashboards-title">Dashboards Power BI</h2>
+                        <p class="dashboards-subtitle">
+                            Análisis interactivo en tiempo real de los proyectos PRONIS Cusco
+                        </p>
+                    </div>
+
+                    <div class="dashboards-grid" id="dashboardsGrid">
+                    </div>
+
+                    <div class="dashboard-instructions">
+                        <div class="instructions-card">
+                            <h3 class="instructions-title">
+                                <i class="fas fa-info-circle"></i>
+                                Cómo usar los dashboards
+                            </h3>
+                            <ul class="instructions-list">
+                                <li>Haz clic en cualquier gráfico para filtrar la información</li>
+                                <li>Usa el botón de pantalla completa para mejor visualización</li>
+                                <li>Los datos se actualizan automáticamente en tiempo real</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <section id="contacto" class="section">
+            <div class="contacto-section">
+                <div class="container">
+                    <div class="contacto-card">
+                        <h2 class="contacto-title">Contacto</h2>
+                        <div class="contacto-content">
+                            <div class="contacto-info">
+                                <h3 class="contacto-subtitle">
+                                    ¿Tienes preguntas sobre las obras del PRONIS?
+                                </h3>
+                                <p class="contacto-description">
+                                    Estamos aquí para ayudarte a entender mejor los proyectos de inversión en salud de la región Cusco.
+                                </p>
+                            </div>
+
+                            <div class="contacto-details">
+                                <div class="contacto-item contacto-item-blue">
+                                    <h4 class="contacto-item-title">Información de Contacto</h4>
+                                    <div class="contacto-item-content">
+<p><strong>Email:</strong> <a href="mailto:gadiel.transparencia@gmail.com">gadiel.transparencia@gmail.com</a></p>
+                                        <p><strong>Teléfono:</strong> +51 9825982**</p>
+                                        <p><strong>Dirección:</strong> San Martín de Porres</p>
+                                    </div>
+                                </div>
+
+                                <div class="contacto-item contacto-item-green">
+                                    <h4 class="contacto-item-title">Horario de Atención</h4>
+                                    <p class="contacto-item-content">
+                                        Lunes a Viernes: 8:00 AM - 5:00 PM
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-actions">
+                                <button class="contacto-btn" onclick="window.location.href='mailto:GaDiel2025@gmail.com'">
+                                    <i class="fas fa-envelope"></i>
+                                    Enviar Email
+                                </button>
+                                <button class="contacto-btn" onclick="window.location.href='tel:+519825982**'">
+                                    <i class="fas fa-phone"></i>
+                                    Llamar Ahora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/img/logo_32.jpeg" alt="Logo GaDiel" class="footer-logo-img">
+                        <div>
+                            <h3 class="footer-logo-title">GaDiel</h3>
+                            <p class="footer-logo-subtitle">Transparencia en Obras de Salud</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Plataforma oficial de seguimiento y análisis de proyectos de inversión en salud del Programa Nacional de Inversiones en Salud.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Enlaces Rápidos</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link" data-section="inicio">Inicio</a>
+                        <a href="#" class="footer-link" data-section="obras">Obras PRONIS</a>
+                        <a href="#" class="footer-link" data-section="dashboards">Dashboards</a>
+                        <a href="#" class="footer-link" data-section="contacto">Contacto</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Contacto</h4>
+                        <p><strong>Email:</strong> <a href="mailto:gadiel.transparencia@gmail.com">gadiel.transparencia@gmail.com</a></p>
+                        <p><i class="fas fa-phone"></i> +51 955330944</p>
+                        <p><i class="fas fa-map-marker-alt"></i> San Martín de Porres</p>
+                        <p><i class="fas fa-clock"></i> Lun - Vie: 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GaDiel - Transparencia en Obras de Salud. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <!-- CHATBOT SCRIPT -->
+    <script src="chatbot-script.js"></script>
+</body>
+</html>
