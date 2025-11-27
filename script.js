@@ -575,7 +575,7 @@ class PRONISApp {
       // 1️⃣ Dashboard PRINCIPAL
       {
         id: 1,
-        titulo: "DASHBOARD PRINCIPAL",
+        titulo: "Dashboard principal con visión general de las obras PRONISL",
         descripcion: "Dashboard principal con visión general de las obras PRONIS",
         iframe_url:
           "https://app.powerbi.com/view?r=eyJrIjoiNzk4NmQ2OGMtZDM5NS00OGI2LWIyNTctMjMzMDY1ODZjMjg4IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9&pageName=842c8bacf2c66411f38c",
@@ -586,7 +586,7 @@ class PRONISApp {
       // 2️⃣ Dashboard SECUNDARIO (1)
       {
         id: 2,
-        titulo: "DASHBOARD SECUNDARIO (1)",
+        titulo: "Dashboard Panorama General",
         descripcion: "Dashboard Panorama General",
         iframe_url:
           "https://app.powerbi.com/view?r=eyJrIjoiZjI3MDlhMjEtMzIyMi00OGE4LWI4YTMtYTUzOTg3MmM5ZmY2IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
@@ -609,7 +609,7 @@ class PRONISApp {
       {
         id: 4,
         titulo: "Análisis complementario del panorama general",
-        descripcion: "Dashboard basado en imagen",
+        descripcion: "Análisis complementario del panorama general",
         iframe_url: null,
         image: "assets/img/dashboard4.jpeg",
         activo: true,
@@ -619,7 +619,7 @@ class PRONISApp {
       // 5️⃣ IMAGEN 2
       {
         id: 5,
-        titulo: "Dashboard Imagen 5",
+        titulo: "Vista ejecutiva con indicadores estratégicos",
         descripcion: "Vista ejecutiva con indicadores estratégicos",
         iframe_url: null,
         image: "assets/img/dashboard5.jpeg",
@@ -630,7 +630,7 @@ class PRONISApp {
       // 6️⃣ IMAGEN 3
       {
         id: 6,
-        titulo: "Dashboard Imagen 6",
+        titulo: "Análisis ejecutivo complementario",
         descripcion: "Análisis ejecutivo complementario",
         iframe_url: null,
         image: "assets/img/dashboard6.jpeg",
