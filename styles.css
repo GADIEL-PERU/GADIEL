@@ -1559,10 +1559,9 @@ body.modal-open {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
-/* 🔥 Fix inmediato para que tus imágenes se vean bien */
 .dashboard-image-container {
     width: 100%;
-    height: 480px;        /* MISMO ALTO QUE POWER BI */
+    height: 540px; /* tamaño exacto */
     border-radius: 12px;
     overflow: hidden;
     background: #ffffff;
@@ -1574,6 +1573,6 @@ body.modal-open {
 .dashboard-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* 🔥 Esto evita que se estiren o deformen */
-    background: #fff;
+    object-fit: cover; /* 🔥 AHORA TODAS SE VERÁN IGUALES */
+    border-radius: 12px;
 }
