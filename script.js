@@ -682,23 +682,27 @@ class PRONISApp {
 
   renderDashboardContent(dashboard) {
     // 1️⃣ Caso: Dashboard con iframe (Power BI)
-    if (
-      dashboard.iframe_url &&
-      dashboard.iframe_url.trim() !== "" &&
-      dashboard.iframe_url.includes("powerbi.com")
-    ) {
-      return `
-        <div class="dashboard-iframe-container" id="dashboard-${dashboard.id}">
-          <iframe
-            src="${dashboard.iframe_url}"
-            class="dashboard-iframe"
-            allowfullscreen="true"
-            loading="lazy"
-            frameborder="0"
-          ></iframe>
-        </div>
-      `
+   renderDashboardContent(dashboard) {
+    const isValidUrl = dashboard.iframe_url && dashboard.iframe_url.trim() !== "" && dashboard.iframe_url.includes("powerbi.com")
+
+    if (isValidUrl) {
+        return `
+        ... (iframe)
+        `;
+    } else {
+        return `
+            <div class="dashboard-image-container">
+                <img src="${dashboard.image}" alt="${dashboard.titulo}" class="dashboard-image">
+            </div>
+            <div class="dashboard-stats">
+                <div class="stat-badge">
+                    <i class="fas fa-image"></i> Vista en imagen
+                </div>
+            </div>
+        `;
     }
+}
+
 
     // 2️⃣ Caso: Dashboard basado en IMAGEN 
     if (dashboard.image) {
