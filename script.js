@@ -589,7 +589,7 @@ class PRONISApp {
         titulo: "DASHBOARD SECUNDARIO (1)",
         descripcion: "Dashboard Panorama General",
         iframe_url:
-          "https://app.powerbi.com/reportEmbed?reportId=31b25613-d149-47e7-a689-9fb4d0ae35a0&autoAuth=true&ctid=0e0cb060-09ad-49f5-a005-68b9b49aa1f6&actionBarEnabled=true",
+          "https://app.powerbi.com/view?r=eyJrIjoiZjI3MDlhMjEtMzIyMi00OGE4LWI4YTMtYTUzOTg3MmM5ZmY2IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
         activo: true,
         orden: 2,
       },
