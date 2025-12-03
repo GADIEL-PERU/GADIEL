@@ -550,43 +550,53 @@ class PRONISApp {
     this.dashboards = [
       {
         id: 1,
-        titulo: "DASHBOARD PRINCIPAL",
-        descripcion: "Dashboard principal con visión general de las obras PRONIS",
+        titulo: "📊 PANORAMA EJECUTIVO PRONIS",
+        descripcion: "Vista estratégica completa - Monitoreo global de inversiones y avances en tiempo real",
         iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiNzk4NmQ2OGMtZDM5NS00OGI2LWIyNTctMjMzMDY1ODZjMjg4IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
         activo: true,
-        orden: 1
+        orden: 1,
+        color: "blue",
+        icon: "fas fa-chart-line"
       },
       {
         id: 2,
-        titulo: "DASHBOARD 2",
-        descripcion: "Análisis detallado de métricas y progreso de obras",
+        titulo: "⚙️ ANÁLISIS DE MÉTRICAS CRÍTICAS",
+        descripcion: "Dashboard táctico - Seguimiento detallado de KPIs físicos y financieros por proyecto",
         iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiZTVlMmJjZmMtNDQ4YS00N2FjLTgxYmMtZGQzYjIwZTQ3NmI3IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
         activo: true,
-        orden: 2
+        orden: 2,
+        color: "green",
+        icon: "fas fa-chart-bar"
       },
       {
         id: 3,
-        titulo: "DASHBOARD 3",
-        descripcion: "Indicadores de desempeño y avance financiero",
+        titulo: "💰 DESEMPEÑO FINANCIERO AVANZADO",
+        descripcion: "Gestión económica inteligente - Rentabilidad, ROI y control presupuestario optimizado",
         iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiOTQ0M2YyZDItODdjYi00NGYyLWE3ZGEtMGM5M2E5ODc2YWFjIiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
         activo: true,
-        orden: 3
+        orden: 3,
+        color: "purple",
+        icon: "fas fa-coins"
       },
       {
         id: 4,
-        titulo: "DASHBOARD 4",
-        descripcion: "Reportes ejecutivos y análisis comparativos",
+        titulo: "🏗️ GESTIÓN OPERATIVA DE OBRAS",
+        descripcion: "Control de ejecución - Avance físico, cronogramas y gestión de contratistas",
         iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiYzIyYmMyY2YtYjk2NC00OTUyLWFiNzMtYWE4ZGNkMTkwMjZhIiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
         activo: true,
-        orden: 4
+        orden: 4,
+        color: "orange",
+        icon: "fas fa-hard-hat"
       },
       {
         id: 5,
-        titulo: "DASHBOARD SECUNDARIO",
-        descripcion: "Vista complementaria y análisis secundarios",
+        titulo: "📈 REPORTES EJECUTIVOS COMPLEMENTARIOS",
+        descripcion: "Análisis comparativos - Benchmarking, tendencias y proyecciones estratégicas",
         iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiZjI3MDlhMjEtMzIyMi00OGE4LWI4YTMtYTUzOTg3MmM5ZmY2IiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
         activo: true,
-        orden: 5
+        orden: 5,
+        color: "teal",
+        icon: "fas fa-file-contract"
       }
     ]
 
@@ -606,15 +616,21 @@ class PRONISApp {
       dashboardsGrid.innerHTML = dashboardsOrdenados
         .map(
           (dashboard, index) => `
-        <div class="dashboard-card" style="animation-delay: ${index * 0.1}s">
+        <div class="dashboard-card ${dashboard.color || ''}" style="animation-delay: ${index * 0.1}s">
           <div class="dashboard-header">
             <div class="dashboard-header-content">
               <div class="dashboard-title-section">
-                <i class="fas fa-chart-bar dashboard-icon"></i>
+                <i class="${dashboard.icon || 'fas fa-chart-bar'} dashboard-icon"></i>
                 <div class="dashboard-text">
-                  <h3>${dashboard.titulo}</h3>
-                  <p>${dashboard.descripcion}</p>
+                  <h3 class="dashboard-main-title">${dashboard.titulo}</h3>
+                  <p class="dashboard-subtitle">${dashboard.descripcion}</p>
                 </div>
+              </div>
+              <div class="dashboard-badges">
+                <span class="dashboard-badge">Dashboard ${dashboard.id}</span>
+                <span class="dashboard-badge live-badge">
+                  <i class="fas fa-circle"></i> EN VIVO
+                </span>
               </div>
             </div>
           </div>
@@ -642,10 +658,13 @@ class PRONISApp {
         </div>
         <div class="dashboard-stats">
           <div class="stat-badge">
-            <i class="fas fa-sync-alt"></i> Actualizado en tiempo real
+            <i class="fas fa-sync-alt"></i> Actualización en tiempo real
           </div>
           <div class="stat-badge" onclick="app.openDashboardFullscreen(${dashboard.id})" style="cursor: pointer;">
-            <i class="fas fa-expand"></i> Pantalla completa
+            <i class="fas fa-expand"></i> Vista completa
+          </div>
+          <div class="stat-badge" onclick="openDashboardNewTab(${dashboard.id})" style="cursor: pointer;">
+            <i class="fas fa-external-link-alt"></i> Abrir en nueva pestaña
           </div>
         </div>
       `
